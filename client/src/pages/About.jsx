@@ -2,6 +2,7 @@ import profilePic from '../assets/propic.jpg';
 import '../App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faUser, faSquare, faLaptop, faNetworkWired } from '@fortawesome/free-solid-svg-icons';
+import MoonPhase from '../components/MoonPhase';
 
 export default function About () {
   return (
@@ -18,7 +19,7 @@ export default function About () {
         ______
       </p>
 
-      <img className="profile-picture" src={profilePic} alt="Profile"  />
+{/*  <img className="profile-picture" src={profilePic} alt="Profile"  />*/}
 
       <div className="blue-separator">
         <FontAwesomeIcon icon={faSquare} className="blue-square" size="sm" />
@@ -34,11 +35,13 @@ export default function About () {
       </div>
 
       <p className='portfolio-bio'>
-      I am a Web Development bootcamp student at Monash University, and aspiring Web Developer and coder. 
-      In my spare time I love reading, writing, arts, swimming and music. As someone keen to pursue a career in tech, I enjoy using my creativity, attention to detail, 
-      and passion for learning to advance in the tech world and achieve outcomes that make a 
-      difference.
+      mmmmmm
+      
       </p>
+
+
+      <MoonPhase />
+
 
       <div className="blue-separator">
         <FontAwesomeIcon icon={faSquare} className="blue-square" size="sm" />
@@ -52,6 +55,12 @@ export default function About () {
         <FontAwesomeIcon icon={faSquare} className="blue-square" size="sm" />
         <FontAwesomeIcon icon={faSquare} className="blue-square" size="sm" />
       </div>
+
+
+<div>
+<MoonPhase />
+
+</div>
 
     </div>
   );
