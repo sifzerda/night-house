@@ -1,0 +1,838 @@
+/* Import Google fonts - Josefin+Sans, Outfit, Source Code Pro, Rubik, Poppins, Vazmatin, Jersey 10, Space Grotesk */
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Vazmatin&display-swap");
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Outfit:wght@100..900&family=Rowdies:wght@300;400;700&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+  --blue: #2684ff;
+  --light-blue: #63f8f1;
+  --volt: #c8ff00;
+  --dark-blue: #072752;
+  --yellow: #e5dc15;
+  --dark-yellow: #c2bb11;
+  --bootstrap-dark: #212529;
+  --bootstrap-lighter: #364459;
+  --cyan: #01fff7;
+  --light-red: #f02652;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+body {
+  background-color: var(--bootstrap-dark);
+}
+
+div#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100%;
+  min-width: 100%;
+}
+
+/* bucket app ---------------------------------------------------------*/
+
+.bucket-app {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  /*below will make app take up full height of page*/
+  min-height: 100vh;
+  background: var(--bootstrap-dark);
+  text-align: center;
+  margin: 0 auto;
+  border-radius: 20px;
+  padding-bottom: 32px;
+}
+
+main.mx-3 {
+  margin: 0 20px;
+}
+
+header.header {
+  background: rgb(54, 68, 89);
+  background: radial-gradient(circle, rgba(54, 68, 89, 1) 0%, rgba(54, 68, 89, 1) 35%, rgba(33, 37, 41, 1) 100%);
+  padding-top: 16px;
+
+  border: var(--volt) ridge 8px;
+}
+
+h1.my-name {
+  color: white;
+  font-size: 50px;
+  font-family: 'Outfit', 'Josephin Sans', 'Arial Narrow Bold', 'Vazmatin', sans-serif;
+
+}
+
+footer.footer {
+  margin-top: auto;
+  background: rgb(54, 68, 89);
+  background: radial-gradient(circle, rgba(54, 68, 89, 1) 0%, rgba(54, 68, 89, 1) 35%, rgba(33, 37, 41, 1) 100%);
+  padding: 16px;
+  border: var(--volt) ridge 8px;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 20px;
+  /* border: red solid 2px; */
+}
+
+.nav-link {
+  background-color: var(--bootstrap-dark) !important;
+  color: white !important;
+  border: 2px solid black !important;
+  font-family: 'Source Code Pro';
+}
+
+.nav-link.active {
+  background-color: var(--bootstrap-dark) !important;
+  color: var(--volt) !important;
+  border: 2px solid rgb(179, 255, 0) !important;
+  font-style: italic;
+}
+
+li.nav-item {
+  min-width: 130px;
+}
+
+h1 {
+  margin: 32px 0;
+  color: var(--blue);
+  font-size: 50px;
+  font-family: 'Josefin Sans', Rubik, 'Arial Narrow Bold', sans-serif
+}
+
+h3 {
+  margin: auto;
+  color: var(--cyan);
+  font-size: 20px;
+}
+
+
+/* currently unused: <p className="separator"> ||||||||||||| </p>*/
+p.separator {
+  color: #c8ff00;
+  margin-bottom: 35px;
+}
+
+/* About ================================================================== */
+
+img.profile-picture {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* projects ---------------------------------------------------------*/
+
+p,
+p.project-description {
+  color: #fff;
+}
+
+div.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px;
+}
+
+div.project-card {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 400px;
+  border: 3px solid var(--bootstrap-lighter);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+div.project-card:hover {
+  opacity: 0.8;
+  border: var(--cyan) solid 3px;
+}
+
+.project-image {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+a.a-title {
+  margin: 20px;
+}
+
+/* opacity hover */
+.project-card {
+  background: var(--bootstrap-dark);
+  padding: 0px;
+  border: rgb(255, 255, 255) solid 2px;
+  border-radius: 3%;
+}
+
+.project-card img {
+  opacity: 1;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+  border: var(--bootstrap-lighter) solid 3px;
+  border-radius: 3%;
+}
+
+.project-card:hover img {
+  opacity: .5;
+  border: var(--cyan) solid 3px;
+}
+
+p.portfolio-bio {
+  max-width: 700px;
+  margin: 20px auto;  
+}
+
+/* Resume -----------------------------------------------------*/ 
+
+p.resume {
+  color: white;
+  font-family: 'Source Code Pro';
+  margin: 20px;
+}
+
+ul.resume {
+  color: white;
+  font-family: 'Source Code Pro';
+  margin: 20px auto;  
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+ul.resume li {
+  margin-left: 120px;
+}
+
+h3.resume-title {
+  color: var(--cyan);
+  font-family: 'Source Code Pro';
+  margin: 20px;
+}
+
+h3.thanks {
+  color: white;
+  font-family: 'Source Code Pro';
+  margin: 20px;
+}
+
+/* Footer -------------------------------------------------------------- */
+
+.red-text {
+  color: white;
+  font-family: 'Source Code Pro';
+}
+
+.cyan-text {
+  color: var(--blue);
+  font-family: 'Source Code Pro';
+}
+
+.volt-text {
+  color: var(--volt);
+  font-family: 'Source Code Pro';
+}
+
+.volt-text:hover {
+  color: var(--light-red);
+  font-family: 'Source Code Pro';
+  font-style: italic;
+}
+
+a {
+  color: var(--blue);
+  font-family: 'Source Code Pro';
+}
+
+a:hover {
+  color: white;
+  font-family: 'Source Code Pro';
+}
+
+a.icon:hover {
+color: white;
+}
+
+/* bucket app ---------------------------------------------------------
+
+.complete {
+  text-decoration: line-through;
+  opacity: 0.4;
+}
+
+.bucket-form {
+  margin-bottom: 32px;
+}
+
+.bucket-input {
+  padding: 14px 32px 14px 16px;
+  border-radius: 4px;
+  border: 2px solid #5d0cff;
+  outline: none;
+  width: 320px;
+  background: transparent;
+  color: #fff;
+}
+
+.bucket-input::placeholder {
+  color: #e2e2e2;
+}
+
+.bucket-button {
+  padding: 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
+  background: #5d0cff;
+  color: #fff;
+  text-transform: capitalize;
+}
+
+.bucket-input.edit {
+  border: 2px solid #149fff;
+}
+
+.bucket-button.edit {
+  background: linear-gradient(90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%);
+  padding: 16px 22px;
+}
+
+.bucket-container {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+}
+
+.bucket-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px auto;
+  color: #fff;
+  padding: 16px;
+  border-radius: 5px;
+  width: 90%;
+}
+
+.low {
+  background: linear-gradient(90deg,
+      rgba(93, 12, 255, 1) 0%,
+      rgba(155, 0, 250, 1) 100%);
+}
+
+.medium {
+  background: linear-gradient(90deg,
+      rgba(255, 12, 241, 1) 0%,
+      rgba(250, 0, 135, 1) 100%);
+}
+
+.high {
+  background: linear-gradient(90deg,
+      rgba(20, 159, 255, 1) 0%,
+      rgba(17, 122, 255, 1) 100%);
+}*/
+
+.project-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.project-info {
+  padding: 20px;
+}
+
+.project-title {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.delete-icon,
+.edit-icon {
+  margin-right: 5px;
+  color: #fff;
+}
+
+/* =============================== Label on project img hover*/
+
+.project-card {
+  position: relative;
+}
+
+.image-container {
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: var(--cyan);
+  border: rgb(255, 255, 255) solid 2px;
+  padding: 10px;
+  display: none;
+  background-color: var(--bootstrap-dark);
+}
+
+.label p {
+  color: var(--cyan);
+  font-size: 24px;
+}
+
+.image-container:hover .label {
+  display: block;
+}
+
+/* ================== Contact Form ============== */
+
+p.contact-text {
+margin-right: 12px;
+}
+
+.icon-container-red {
+  display: flex;
+  justify-content: center; 
+}
+
+.contact-text-red {
+  margin-right: 12px;
+  background-color: rgb(187, 255, 0);
+  color: black;
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+}
+
+.form-container input,
+.form-container textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+form {
+  width: 40%;
+  margin: 0 auto;
+}
+
+.wider-form {
+  width: 350px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+}
+
+.form-container button {
+  background-color: var(--blue);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+
+.form-container button:hover {
+  background-color: white;
+  color: var(--blue);
+}
+
+label {
+  display: block;
+  text-decoration-line: underline;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 0.2em;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  color: var(--cyan);
+  font-family: 'Source Code Pro';
+
+}
+
+div.contact-icons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  /*  border: red solid 2px;  ------ only apply this to locate flexboxes*/
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  /*  border: red solid 2px;  ------ only apply this to locate flexboxes*/
+}
+
+.icon-container p {
+  margin-left: 15px;
+  /* Adds space between icon and text */
+}
+
+div.confirmation-message {
+  background-color: var(--blue);
+  border: 3px solid #ffffff;
+  border-radius: 4px;
+  width: 25%;
+  height: 105px;
+  margin: 0 auto;
+  padding: 10px;
+}
+
+a.icon {
+  color: var(--blue);
+  font-size: 1.3em;
+  margin-right: 10px;
+
+}
+
+/* ================  Dropdown menu - currently unused ========================== */
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: #ec5700;
+  border-radius: 4px;
+  color: white;
+  padding: 16px;
+  margin: 10px;
+  /* font-size: 16px; */
+  border: none;
+}
+
+/* dropdown container  */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content  */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  min-width: 215px;
+  border-radius: 4px;
+  padding: 16px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content p {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content p:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #5d0cff;
+}
+
+/* ================ Blue squares divider (fixed: green/volt) ========================== */
+
+div.blue-separator {
+  display: flex;
+  justify-content: center;
+  /* Align squares with space between */
+  align-items: center;
+  padding: 35px 0;
+}
+
+.blue-square {
+  width: 8px;
+  height: 8px;
+  background-color: var(--volt);
+  margin: 0 5px;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ========================= media queries ======================== */
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* media query for contact flex-box icons*/
+@media screen and (max-width: 600px) {
+  div.icon-container {
+    flex-basis: 50%;
+  }
+}
+
+/* Small screens (mobile devices) */
+@media screen and (max-width: 768px) {
+  div#root {
+    padding: 2rem;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  div.project-card {
+    max-width: 300px;
+  }
+
+  div.project-list {
+    padding: 10px;
+  }
+
+  .nav-links li {
+    margin: 0 10px;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  h1 {
+    margin: 16px 0;
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  p.separator {
+    margin-bottom: 20px;
+  }
+
+  img.profile-picture {
+    width: 150px;
+    height: 150px;
+  }
+
+  p,
+  p.project-description {
+    font-size: 14px;
+  }
+
+  div.project-list {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  div.project-card {
+    max-width: 300px;
+    border: 2px solid var(--bootstrap-lighter);
+  }
+
+  div.project-card:hover {
+    border: var(--cyan) solid 2px;
+  }
+
+  a.a-title {
+    margin: 10px;
+  }
+
+  .project-info {
+    padding: 10px;
+  }
+
+  .project-title {
+    font-size: 1rem;
+    margin-bottom: 5px;
+  }
+
+  .project-description {
+    font-size: 0.9rem;
+    color: #666;
+  }
+
+  .icons {
+    font-size: 20px;
+  }
+
+  .label {
+    padding: 5px;
+  }
+
+  .label p {
+    font-size: 14px;
+  }
+
+  form {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .form-container button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+
+  .confirmation-message {
+    padding: 8px;
+    margin-top: 5px;
+    font-size: 14px;
+  }}
+
+/* Medium screens (tablets) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+
+  /* Add your styles for medium screens here */
+  /* For example: */
+  div#root {
+    padding: 3rem;
+  }
+
+  .bucket-app {
+    padding-bottom: 12px;
+  }
+
+  main.mx-3 {
+    margin: 0 10px;
+  }
+
+  footer.footer {
+    padding: 12px;
+    border-width: 6px;
+  }
+
+  div.project-list {
+    gap: 20px;
+    padding: 10px;
+  }
+
+  div.project-card {
+    max-width: 300px;
+    border-width: 2px;
+    margin-bottom: 10px;
+  }
+
+  form {
+    width: 80%;
+  }
+
+  .form-container button {
+    padding: 8px 16px;
+    font-size: 14px; 
+  }
+
+  div.blue-separator {
+    padding: 25px 50px;
+  }}
+
+/* Large screens (desktops and laptops) */
+@media screen and (min-width: 1024px) {
+
+  /* Add your styles for large screens here */
+  /* For example: */
+  div#root {
+    padding: 4rem;
+  }
+
+  div.icon-container {
+    justify-content: center;
+    margin-right: 20px;
+  }
+}

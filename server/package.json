@@ -1,0 +1,31 @@
+{
+    "name": "night-house",
+    "version": "0.0.0",
+    "description": "",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server.js",
+        "watch": "nodemon",
+        "seed": "node config/seeds.js"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "@fortawesome/fontawesome-svg-core": "^6.5.2",
+        "@fortawesome/free-solid-svg-icons": "^6.5.2",
+        "@fortawesome/react-fontawesome": "^0.2.0",
+        "axios": "^1.6.8",
+        "bcrypt": "^4.0.1",
+        "body-parser": "^1.20.2",
+        "cors": "^2.8.5",
+        "dayjs": "^1.11.11",
+        "dotenv": "^16.4.5",
+        "express": "^4.19.2",
+        "node-mailjet": "^6.0.5",
+        "react-icons": "^5.2.1"
+    },
+    "devDependencies": {
+        "nodemon": "^2.0.2"
+    }
+}
